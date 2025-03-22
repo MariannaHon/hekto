@@ -1,0 +1,13 @@
+.listMode {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    margin-bottom: 4.8rem;
+}
+
+.gridMode {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    margin-bottom: 4.8rem;
+}

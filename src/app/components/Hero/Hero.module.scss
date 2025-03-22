@@ -1,0 +1,50 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.hero {
+    position: relative;
+    background-color: #f2f0ff;
+}
+
+.img {
+    height: auto;
+    max-width: 22%;
+    position: absolute;
+    top: 0;
+    left: clamp(1.5rem, 3.91vw, 7rem);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    padding: 3.4rem 17.3rem 3.4rem 41.5rem;
+}
+
+.text {
+    max-height: 29.6rem;
+    max-width: 57rem;
+    margin-right: 5.6rem;
+}
+
+.product {
+    position: relative;
+}
+
+.discount {
+    position: absolute;
+    max-width: 22%;
+    height: auto;
+    top: 6rem;
+    right: 1.2rem;
+}
+
+.dots {
+    position: absolute;
+    bottom: 4.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    fill: none;
+    stroke: $pink-primary;
+}

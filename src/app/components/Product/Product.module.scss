@@ -1,0 +1,91 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 10rem 0;
+}
+
+.box {
+    display: flex;
+    gap: 3.2rem;
+    margin-right: auto;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    max-width: 19.2rem;
+    gap: 1.5rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    max-width: 41.3rem;
+    text-align: start;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 1.22222;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: #0d134e;
+    margin-bottom: 0.8rem;
+}
+
+.stars {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2.4rem;
+}
+
+.bright {
+    fill: $yellow;
+}
+
+.star {
+    fill: $grey-medium;
+}
+
+.price {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.text {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.25;
+    text-align: center;
+    color: $black;
+}
+
+.pink {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.14286;
+    text-align: center;
+    color: $pink-primary;
+    text-decoration: line-through;
+}
+
+.bottom {
+    margin-top: 2.4rem;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.heart {
+    fill: $black;
+}
+
+.img {
+    box-shadow: 0.8rem 6.4rem 8rem -1.6rem rgba(16, 23, 80, 0.15);
+    background: var(--white);
+}

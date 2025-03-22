@@ -1,0 +1,51 @@
+@use '../../../sass/abstracts/variables' as *;
+@use '../../../sass/abstracts/mixins' as *;
+
+.card {
+    width: 27.2rem;
+    height: 37.2rem;
+    background-color: $white;
+    &:hover,
+    &:focus {
+        margin-top: -2.4rem;
+        .img {
+            box-shadow: 0.8rem 6.4rem 8rem -1.6rem rgba(16, 23, 80, 0.15);
+        }
+        .shadow,
+        .btn {
+            display: flex;
+        }
+    }
+}
+
+.box {
+    position: relative;
+}
+
+.img {
+    display: flex;
+    border-radius: 100%;
+    width: 27.2rem;
+    height: 27.2rem;
+    object-fit: cover;
+    margin-bottom: 3.2rem;
+    align-items: end;
+}
+
+.shadow {
+    fill: $grey-dark;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    bottom: 3.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    display: none;
+    @include btnGreen(11.4rem);
+}

@@ -1,0 +1,76 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.list {
+    display: flex;
+    gap: 3.2rem;
+    margin-bottom: 2.6rem;
+}
+
+.link {
+    padding: 2.4rem 1.6rem;
+
+    font-size: 1.8rem;
+    line-height: 1.33333;
+    color: $black;
+}
+
+.active {
+    color: $pink-primary;
+}
+
+.box {
+    display: flex;
+    gap: 23.2rem;
+    align-items: center;
+    margin-bottom: 14.8rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    max-width: 64rem;
+    align-items: start;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.27273;
+    color: $pink-primary;
+}
+
+.text {
+    font-size: 1.8rem;
+    line-height: 1.33333;
+    color: $grey-dark;
+    text-align: start;
+    max-width: 52rem;
+}
+
+.props {
+    height: 7.2rem;
+    max-width: 51.4rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2.4rem 3.2rem;
+    // overflow-x: hidden;
+}
+
+.item {
+    display: flex;
+    text-align: start;
+    gap: 0.8rem;
+
+    font-size: 1.6rem;
+    line-height: 1.25;
+    color: $grey-dark;
+}
+
+.icon {
+    stroke: $black;
+    fill: none;
+    stroke-width: 1px;
+}

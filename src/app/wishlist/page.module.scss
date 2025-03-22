@@ -1,0 +1,20 @@
+@use '../../sass/abstracts/variables' as *;
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.23077;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    text-align: center;
+    color: $black;
+    margin-top: 5.6rem;
+    margin-bottom: 8rem;
+}
+
+.list {
+    display: flex;
+    gap: 3.2rem;
+    margin-bottom: 8rem;
+}

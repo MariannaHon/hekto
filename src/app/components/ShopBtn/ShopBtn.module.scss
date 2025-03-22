@@ -1,0 +1,5 @@
+@use '../../../sass/abstracts/mixins' as *;
+
+.btn {
+    @include btnPink(15.6rem);
+}

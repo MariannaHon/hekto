@@ -1,0 +1,42 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.list {
+    display: flex;
+    gap: 6.4rem;
+    margin-bottom: 6.4rem;
+}
+
+.item {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.33333;
+    color: $black;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $pink-primary;
+    }
+}
+
+.active {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.33333;
+    color: $black;
+    color: $pink-primary;
+}
+
+.link {
+    padding: 1.6rem 0 6.4rem 0;
+}
+
+.cards {
+    gap: 4rem 3.2rem;
+}
+
+.products {
+    display: flex;
+    width: 131.2rem;
+    flex-wrap: wrap;
+    gap: 4rem 3.2rem;
+}

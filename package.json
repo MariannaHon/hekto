@@ -1,0 +1,41 @@
+{
+    "name": "hekto_honcharuk",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --turbopack",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "compile:sass": "sass src/sass/main.scss src/css/index.css -w",
+        "json-server": "json-server --watch products.json"
+    },
+    "dependencies": {
+        "@headlessui/react": "^2.2.0",
+        "@reduxjs/toolkit": "^2.6.1",
+        "axios": "^1.8.3",
+        "next": "15.2.0",
+        "next-i18next": "^15.4.2",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-hot-toast": "^2.5.2",
+        "react-redux": "^9.2.0",
+        "react-router-dom": "^7.2.0",
+        "react-select": "^5.10.1",
+        "react-slick": "^0.30.3",
+        "redux-persist": "^6.0.0",
+        "sass": "^1.85.1",
+        "slick-carousel": "^1.8.1",
+        "swiper": "^11.2.5"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@types/node": "^20",
+        "@types/react": "^19.0.10",
+        "@types/react-dom": "^19.0.4",
+        "@types/react-slick": "^0.23.13",
+        "eslint": "^9",
+        "eslint-config-next": "15.2.0",
+        "typescript": "^5.8.2"
+    }
+}

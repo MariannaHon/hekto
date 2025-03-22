@@ -1,0 +1,31 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.card {
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+    width: 30.4rem;
+    height: 34.4rem;
+    box-shadow: 0.8rem 2.4rem 3.2rem -1.6rem rgba(16, 23, 80, 0.15);
+    background: $white;
+    &:hover,
+    &:focus {
+        margin-top: -2.4rem;
+        box-shadow: 0.8rem 6.4rem 8rem -1.6rem rgba(16, 23, 80, 0.15);
+    }
+}
+
+.img {
+    border-radius: 0.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.8rem;
+    gap: 1.5rem;
+}
+
+.text {
+    font-family: 'Josefin Sans', sans-serif;
+}

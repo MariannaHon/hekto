@@ -1,0 +1,58 @@
+@use '../../../sass/abstracts/variables' as *;
+@use '../../../sass/abstracts/mixins' as *;
+
+.unique {
+    background-color: #f1f0ff;
+}
+
+.img {
+    margin-right: 3.3rem;
+}
+
+.right {
+    max-width: 53.4rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4.8rem;
+}
+
+.item {
+    display: flex;
+}
+
+.list .item::before {
+    content: '';
+    width: 1.1rem;
+    height: 1.2rem;
+    border-radius: 100%;
+    margin-right: 1.6rem;
+    background-color: $pink-primary;
+}
+
+.list .item:nth-child(2)::before,
+.list .item:nth-child(2n + 3)::before {
+    background-color: $violet;
+}
+
+.list .item:nth-child(3)::before,
+.list .item:nth-child(3n + 3)::before {
+    background-color: $green;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    max-width: 10.6rem;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.14286;
+    color: $black;
+}

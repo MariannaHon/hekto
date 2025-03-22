@@ -1,0 +1,105 @@
+@use '../../../sass/abstracts/variables' as *;
+@use '../../../sass/abstracts/mixins' as *;
+
+.aside {
+    max-width: 16.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+.field {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.legend {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: $black;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #000;
+    margin-bottom: 2.3rem;
+}
+
+.label {
+    position: relative;
+    padding-left: 2.4rem;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+}
+
+.input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.violet {
+    @include color($violet-light);
+}
+
+.pink {
+    @include color($red-light);
+}
+
+.yellow {
+    @include color($yellow-light);
+}
+
+.check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: transparent;
+    transition: fill 100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:checked + .violet {
+    fill: $violet;
+}
+
+.input:checked + .violet .check {
+    fill: white;
+}
+
+.input:checked + .pink {
+    fill: $pink-primary;
+}
+
+.input:checked + .pink .check {
+    fill: white;
+}
+
+.input:checked + .yellow {
+    fill: $yellow;
+}
+
+.input:checked + .yellow .check {
+    fill: white;
+}
+
+.stars {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.star {
+    fill: $grey-medium;
+}
+
+.bright {
+    fill: $yellow;
+}

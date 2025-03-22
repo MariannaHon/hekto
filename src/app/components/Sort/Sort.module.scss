@@ -1,0 +1,118 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.container {
+    display: flex;
+    max-width: 69.4rem;
+    gap: 6.4rem;
+}
+
+.wrapper {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    position: relative;
+}
+
+.select {
+    position: relative;
+    width: 9.6rem;
+    height: 4rem;
+}
+
+.selectSort {
+    position: relative;
+    width: 20.8rem;
+    height: 4rem;
+}
+
+.input {
+    border: 1px solid $grey-medium;
+    border-radius: 0.8rem;
+    padding: 0.2rem 0.2rem 0.2rem 1.6rem;
+    max-width: 9.6rem;
+    width: 100%;
+    height: 4rem;
+    background-color: $white;
+}
+
+.inputSort {
+    border: 1px solid $grey-medium;
+    border-radius: 0.8rem;
+    padding: 0.2rem 0.2rem 0.2rem 1.6rem;
+    max-width: 20.8rem;
+    width: 100%;
+    height: 4rem;
+    background-color: $white;
+}
+
+.arrow {
+    fill: none;
+    stroke: $black;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.options {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1;
+    border: 1px solid $grey-medium;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    max-width: 9.6rem;
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    flex-direction: column;
+    gap: 1.6rem;
+    display: none;
+}
+
+.optionsSort {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    z-index: 1;
+    border: 1px solid $grey-medium;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    max-width: 20.8rem;
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    display: none;
+}
+
+.option {
+    border-radius: 0.9rem;
+    height: 4rem;
+    padding: 1.2rem;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.14286;
+    color: $black;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $grey-light;
+    }
+}
+
+.icon {
+    fill: none;
+    stroke: $black;
+}
+
+.active {
+    fill: $pink-primary;
+    stroke: none;
+}

@@ -1,0 +1,87 @@
+@use '../../sass/abstracts/variables' as *;
+
+.wrapper {
+    margin-top: 5.6rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 8rem;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.item {
+    line-height: 1.25;
+    text-align: center;
+    color: $grey-dark;
+}
+
+.active {
+    color: $pink-primary;
+}
+
+.dot {
+    border-radius: 100%;
+    background-color: #d9d9d9;
+    width: 0.4rem;
+    height: 0.4rem;
+    padding: 0.2rem;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        'sort sort'
+        'filters products';
+    gap: 0 17.2rem;
+}
+
+.sort {
+    grid-area: sort;
+    justify-self: end;
+    margin-bottom: 3.2rem;
+}
+
+.filters {
+    grid-area: filters;
+    justify-self: start;
+}
+
+.products {
+    grid-area: products;
+    justify-self: end;
+    margin-bottom: 4.8rem;
+}
+
+.pages {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-bottom: 10rem;
+    gap: 0.8rem;
+}
+
+.pageButton {
+    background-color: transparent;
+    border: none;
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.activePage {
+    background-color: $pink-primary;
+    border-radius: 0.4rem;
+    border: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    color: $white;
+}

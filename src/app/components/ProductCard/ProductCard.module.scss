@@ -1,0 +1,139 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.card {
+    display: flex;
+    border-radius: 0.4rem;
+    box-shadow: 0.8rem 2.4rem 3.2rem -1.6rem rgba(16, 23, 80, 0.15);
+    background: $white;
+}
+
+.listCard {
+    width: 97.6rem;
+    height: 23.2rem;
+    padding: 1.6rem;
+    gap: 3.2rem;
+}
+
+.gridCard {
+    position: relative;
+    flex-direction: column;
+    width: 30.4rem;
+    height: 44.8rem;
+    padding: 0.8rem;
+}
+
+.listContainer {
+    padding: 4rem 2.4rem 1.8rem 0;
+    text-align: start;
+    width: 100%;
+}
+
+.gridContainer {
+    padding: 1.6rem 0.8rem;
+    text-align: start;
+}
+
+.listTop {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+
+.gridTop {
+    margin-bottom: 0.8rem;
+    text-align: start;
+}
+
+.listStars {
+    display: flex;
+    gap: 0.8rem;
+    margin-left: auto;
+}
+
+.gridStars {
+    display: flex;
+    gap: 0.8rem;
+    margin: 0.8rem 0;
+}
+
+.star {
+    fill: $grey-medium;
+}
+
+.bright {
+    fill: $yellow;
+}
+
+.box {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.1rem;
+}
+
+.text {
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.25;
+    text-align: center;
+    color: $black;
+}
+
+.listList {
+    display: flex;
+    margin-top: 3.7rem;
+    gap: 2.4rem;
+}
+
+.gridList {
+    display: flex;
+    position: absolute;
+    bottom: 1.6rem;
+    left: 1.6rem;
+    gap: 2.4rem;
+}
+
+.item {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 3.2rem;
+    background-color: $white;
+}
+
+.icon {
+    fill: $tertiary;
+}
+
+.card-zoomed {
+    width: 60rem;
+    height: 40rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: white;
+    padding: 0;
+    border-radius: 16px;
+    &:hover,
+    &:focus {
+        margin: 0;
+    }
+}
+
+.img-zoomed {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+.favorite {
+    fill: $pink-dark;
+}
+
+.img {
+    height: 20rem;
+    width: 28.8rem;
+}

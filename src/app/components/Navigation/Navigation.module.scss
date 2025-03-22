@@ -1,0 +1,29 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.menu {
+    display: flex;
+}
+
+.logo {
+    margin-right: 8rem;
+    padding: 2.2rem 0;
+}
+
+.list {
+    display: flex;
+    gap: 3.2rem;
+    margin-right: auto;
+}
+
+.link {
+    padding: 2.8rem 0 2.4rem 0;
+
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.25;
+}
+
+.active {
+    color: $pink-primary;
+    cursor: pointer;
+    padding: 2.8rem 0 2.4rem 0;
+}

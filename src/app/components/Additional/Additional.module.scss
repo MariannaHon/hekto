@@ -1,0 +1,73 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.add {
+    width: 192rem;
+    background-color: $grey-light;
+}
+
+.container {
+    padding: 6.4rem 0;
+    margin: 0 auto;
+    max-width: 108.8rem;
+}
+
+.list {
+    display: flex;
+    gap: 7.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.item {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 1.23077;
+    color: $black;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.27273;
+    color: $black;
+    margin-bottom: 1.6rem;
+    margin-top: 3.2rem;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.icon {
+    fill: none;
+    stroke: $grey-dark;
+}
+
+.box {
+    position: relative;
+    max-height: 42rem;
+    max-width: 108.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.video {
+    max-height: 41.6rem;
+    max-width: 108.8rem;
+}
+
+.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.active {
+    border-bottom: 1px solid black;
+}

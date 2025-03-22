@@ -1,0 +1,15 @@
+@use '../../../sass/abstracts/variables' as *;
+
+.list {
+    display: flex;
+    width: 131.2rem;
+    height: 47rem;
+    gap: 3.2rem;
+    margin-bottom: 10rem;
+}
+
+.item {
+    margin-top: 2rem;
+    width: 30.4rem;
+    height: 36.8rem;
+}

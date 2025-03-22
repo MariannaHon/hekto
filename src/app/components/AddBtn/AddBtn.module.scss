@@ -1,0 +1,7 @@
+@use '../../../sass/abstracts/variables' as *;
+@use '../../../sass/abstracts/mixins' as *;
+
+.btn {
+    @include btnPink(17.1rem);
+    margin-right: 1.6rem;
+}

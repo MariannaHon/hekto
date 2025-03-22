@@ -1,0 +1,94 @@
+@use '../../sass/abstracts/variables' as *;
+@use '../../sass/abstracts/mixins' as *;
+
+.wrapper {
+    display: flex;
+    max-width: 108.9rem;
+    margin: 0 auto;
+    padding: 10.4rem 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-right: 14.5rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary {
+    width: 30.4rem;
+    border-radius: 0.8rem;
+    background-color: $grey-light;
+    padding: 2.4rem;
+    margin-bottom: 3.2rem;
+}
+
+.list {
+    margin-bottom: 3.2rem;
+}
+
+.item {
+    width: 25.6rem;
+    padding-bottom: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-medium;
+}
+
+.item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.text {
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+    color: $black;
+}
+
+.price {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-align: right;
+    color: $black;
+}
+
+.btn {
+    @include btnPink(25.6rem);
+}
+
+.clear {
+    background-color: transparent;
+    border: none;
+
+    line-height: 1.25;
+    text-align: center;
+    color: $pink-primary;
+}
+
+.box {
+    max-width: 33.8rem;
+    margin: 0 auto;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    margin-bottom: 3.4rem;
+}
+
+.start {
+    @include btnPink(19.2rem);
+    margin-top: 3.4rem;
+}
