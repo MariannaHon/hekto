@@ -101,6 +101,14 @@
 
 .icon {
     fill: $tertiary;
+    &:hover,
+    &:focus {
+        background-color: $grey-medium;
+        border-radius: 3.2rem;
+        padding: 0.4rem;
+        width: 3.2rem;
+        height: 3.2rem;
+    }
 }
 
 .img-zoomed {
