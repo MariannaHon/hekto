@@ -1,3 +1,3 @@
 import { RootState } from '../store';
 
-export const selectWishlistItems = (state: RootState) => state.wish.items;
+export const selectWishListItems = (state: RootState) => state.wish.items;

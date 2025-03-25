@@ -11,6 +11,8 @@ import {
     selectLoading,
 } from '@/redux/products/selectors';
 
+import Loader from '../Loader/Loader';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Keyboard, Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -22,7 +24,7 @@ const Featured: React.FC = () => {
     const isLoading = useSelector(selectLoading);
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loader />;
     }
 
     if (error) {

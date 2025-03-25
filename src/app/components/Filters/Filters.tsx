@@ -1,7 +1,7 @@
 'use client';
 
 import css from './Filters.module.scss';
-import { changeFilter, FilterKey } from '@/redux/filters/slice';
+import { changeFilter } from '@/redux/filters/slice';
 import { useAppDispatch } from '@/redux/hooks';
 import { useSelector } from 'react-redux';
 import {
@@ -12,6 +12,7 @@ import {
     selectRatingFilter,
 } from '@/redux/filters/selectors';
 import { useState, useEffect } from 'react';
+import { FilterType } from '@/redux/filters/slice';
 
 const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
     const dispatch = useAppDispatch();
@@ -51,13 +52,13 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
 
     const handleCheckboxChange = (
         e: React.ChangeEvent<HTMLInputElement>,
-        filterType: FilterKey
+        filterType: FilterType
     ) => {
         const value = e.target.value;
         const isChecked = e.target.checked;
 
         switch (filterType) {
-            case 'brand':
+            case FilterType.Brand:
                 const newBrandFilters = isChecked
                     ? [...brandFilters, value]
                     : brandFilters.filter(item => item !== value);
@@ -66,7 +67,7 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                     changeFilter({ filter: filterType, value: newBrandFilters })
                 );
                 break;
-            case 'categories':
+            case FilterType.Categories:
                 const newCategoriesFilters = isChecked
                     ? [...categoriesFilters, value]
                     : categoriesFilters.filter(item => item !== value);
@@ -78,7 +79,7 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                     })
                 );
                 break;
-            case 'discount':
+            case FilterType.Discount:
                 const newDiscountFilters = isChecked
                     ? [...discountFilters, value]
                     : discountFilters.filter(item => item !== value);
@@ -90,7 +91,7 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                     })
                 );
                 break;
-            case 'price':
+            case FilterType.Price:
                 const priceValue = parseInt(value);
                 const newPriceFilters = isChecked
                     ? [...priceFilters, priceValue]
@@ -101,7 +102,7 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                     changeFilter({ filter: filterType, value: newPriceFilters })
                 );
                 break;
-            case 'rating':
+            case FilterType.Rating:
                 const ratingValue = parseInt(value);
                 const newRatingFilters = isChecked
                     ? [...ratingFilters, ratingValue]
@@ -135,11 +136,14 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                                     value={brandName}
                                     checked={brandFilters.includes(brandName)}
                                     onChange={e =>
-                                        handleCheckboxChange(e, 'brand')
+                                        handleCheckboxChange(
+                                            e,
+                                            FilterType.Brand
+                                        )
                                     }
                                 />
                                 <span className={css.violet}>
-                                    <svg width="16" height="16">
+                                    <svg width="18" height="18">
                                         <use href="/img/sprite.svg#icon-checked"></use>
                                     </svg>
                                     <svg
@@ -172,11 +176,11 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                                     discountValue
                                 )}
                                 onChange={e =>
-                                    handleCheckboxChange(e, 'discount')
+                                    handleCheckboxChange(e, FilterType.Discount)
                                 }
                             />
                             <span className={css.pink}>
-                                <svg width="16" height="16">
+                                <svg width="18" height="18">
                                     <use href="/img/sprite.svg#icon-checked"></use>
                                 </svg>
                                 <svg
@@ -205,11 +209,11 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                                 value={ratingValue}
                                 checked={ratingFilters.includes(ratingValue)}
                                 onChange={e =>
-                                    handleCheckboxChange(e, 'rating')
+                                    handleCheckboxChange(e, FilterType.Rating)
                                 }
                             />
                             <span className={css.yellow}>
-                                <svg width="16" height="16">
+                                <svg width="18" height="18">
                                     <use href="/img/sprite.svg#icon-checked"></use>
                                 </svg>
                                 <svg
@@ -229,8 +233,8 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                                                 ? css.bright
                                                 : css.star
                                         }
-                                        width="16"
-                                        height="16"
+                                        width="18"
+                                        height="18"
                                     >
                                         <use href="/img/sprite.svg#icon-star"></use>
                                     </svg>
@@ -263,11 +267,14 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                                     categoryValue
                                 )}
                                 onChange={e =>
-                                    handleCheckboxChange(e, 'categories')
+                                    handleCheckboxChange(
+                                        e,
+                                        FilterType.Categories
+                                    )
                                 }
                             />
                             <span className={css.pink}>
-                                <svg width="16" height="16">
+                                <svg width="18" height="18">
                                     <use href="/img/sprite.svg#icon-checked"></use>
                                 </svg>
                                 <svg
@@ -300,11 +307,14 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                                     value={priceValue}
                                     checked={priceFilters.includes(priceValue)}
                                     onChange={e =>
-                                        handleCheckboxChange(e, 'price')
+                                        handleCheckboxChange(
+                                            e,
+                                            FilterType.Price
+                                        )
                                     }
                                 />
                                 <span className={css.pink}>
-                                    <svg width="16" height="16">
+                                    <svg width="18" height="18">
                                         <use href="/img/sprite.svg#icon-checked"></use>
                                     </svg>
                                     <svg
@@ -329,10 +339,12 @@ const Filters: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                             name="900"
                             value="900"
                             checked={priceFilters.includes(900)}
-                            onChange={e => handleCheckboxChange(e, 'price')}
+                            onChange={e =>
+                                handleCheckboxChange(e, FilterType.Price)
+                            }
                         />
                         <span className={css.pink}>
-                            <svg width="16" height="16">
+                            <svg width="18" height="18">
                                 <use href="/img/sprite.svg#icon-checked"></use>
                             </svg>
                             <svg className={css.check} width="10" height="8">

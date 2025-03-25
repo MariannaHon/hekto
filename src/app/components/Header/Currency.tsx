@@ -11,6 +11,8 @@ const Currency = () => {
         setSelectedCurrency(cur);
     };
 
+    const currency = ['USD', 'PLN', 'UAH'];
+
     return (
         <Menu>
             <MenuButton className={css.select}>
@@ -20,7 +22,7 @@ const Currency = () => {
                 </svg>
             </MenuButton>
             <MenuItems className={css.options} anchor="bottom">
-                {['USD', 'PLN', 'UAH'].map(cur => (
+                {currency.map(cur => (
                     <MenuItem key={cur}>
                         {({ active }) => (
                             <div

@@ -9,6 +9,7 @@ import { selectPost, selectError, selectLoading } from '@/redux/blog/selectors';
 import css from './BlogList.module.scss';
 
 import BlogCard from '../BlogCard/BlogCard';
+import Loader from '../Loader/Loader';
 
 const BlogList: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -20,7 +21,7 @@ const BlogList: React.FC = () => {
         dispatch(fetchBlog());
     }, [dispatch]);
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <Loader />;
     if (error) return <div>Error: {error}</div>;
 
     return (

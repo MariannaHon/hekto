@@ -11,6 +11,8 @@ const Lang = () => {
         setSelectedLanguage(language);
     };
 
+    const lang = ['English', 'Polish', 'Ukrainian'];
+
     return (
         <Menu>
             <MenuButton className={css.select}>
@@ -20,7 +22,7 @@ const Lang = () => {
                 </svg>
             </MenuButton>
             <MenuItems className={css.options} anchor="bottom">
-                {['English', 'Polish', 'Ukrainian'].map(language => (
+                {lang.map(language => (
                     <MenuItem key={language}>
                         {({ active }) => (
                             <div

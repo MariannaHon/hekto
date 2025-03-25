@@ -30,7 +30,7 @@ const Latest: React.FC = () => {
     return (
         <section className="container">
             <div className="wrapper">
-                <h2 className="subtitle mb-16">Leatest Products</h2>
+                <h2 className="subtitle mb-16">Latest Products</h2>
                 <ul className={css.list}>
                     {list.map(tab => (
                         <li

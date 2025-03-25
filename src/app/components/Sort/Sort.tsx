@@ -16,7 +16,7 @@ const Sort: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
     const [showPaginationOptions, setShowPaginationOptions] = useState(false);
     const [showPriceOptions, setShowPriceOptions] = useState(false);
     const [perPageValue, setPerPageValue] = useState('10');
-    const [sortOrder, setSortOrder] = useState<'high' | 'low' | null>(null);
+    const [sortOrder, setSortOrder] = useState<string | null>(null);
     const [activeViewMode, setActiveViewMode] = useState<'grid' | 'list'>(
         'list'
     );
@@ -44,7 +44,12 @@ const Sort: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
         setShowPriceOptions(false);
     };
 
-    const handleViewModeChange = (mode: 'grid' | 'list') => {
+    enum ViewMode {
+        Grid = 'grid',
+        List = 'list',
+    }
+
+    const handleViewModeChange = (mode: ViewMode) => {
         dispatch(changeViewMode(mode));
         setActiveViewMode(mode);
     };
@@ -156,7 +161,7 @@ const Sort: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                     className={`${
                         activeViewMode === 'grid' ? css.active : css.icon
                     }`}
-                    onClick={() => handleViewModeChange('grid')}
+                    onClick={() => handleViewModeChange(ViewMode.Grid)}
                 >
                     <svg width="24" height="24">
                         <use href="/img/sort.svg#icon-grid"></use>
@@ -166,7 +171,7 @@ const Sort: React.FC<React.HTMLAttributes<HTMLElement>> = ({ ...props }) => {
                     className={`${
                         activeViewMode === 'list' ? css.active : css.icon
                     }`}
-                    onClick={() => handleViewModeChange('list')}
+                    onClick={() => handleViewModeChange(ViewMode.List)}
                 >
                     <svg width="24" height="24">
                         <use href="/img/sort.svg#icon-list"></use>

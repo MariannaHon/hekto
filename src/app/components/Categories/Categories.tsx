@@ -15,6 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Keyboard, Mousewheel, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Loader from '../Loader/Loader';
 
 const Categories: React.FC = () => {
     const products = useSelector(selectProducts);
@@ -22,7 +23,7 @@ const Categories: React.FC = () => {
     const isLoading = useSelector(selectLoading);
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loader />;
     }
 
     if (error) {

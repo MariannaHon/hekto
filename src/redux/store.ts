@@ -2,7 +2,7 @@ import { productsReducer } from './products/slice';
 import { blogReducer } from './blog/slice';
 import cartReducer from './cart/slice';
 import { filtersReducer } from './filters/slice';
-import { wishlistReducer } from './wishlist/slice';
+import { wishListReducer } from './wishlist/slice';
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import {
     persistReducer,
@@ -31,7 +31,7 @@ const rootReducer = combineReducers({
     products: productsReducer,
     blog: blogReducer,
     filters: filtersReducer,
-    wish: persistReducer(wishPersistConfig, wishlistReducer),
+    wish: persistReducer(wishPersistConfig, wishListReducer),
 });
 
 export const store = configureStore({

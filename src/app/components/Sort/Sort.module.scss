@@ -54,6 +54,7 @@
     right: 1rem;
     transform: translateY(-50%);
     z-index: 10;
+    cursor: pointer;
 }
 
 .options {
@@ -110,9 +111,11 @@
 .icon {
     fill: none;
     stroke: $black;
+    cursor: pointer;
 }
 
 .active {
     fill: $pink-primary;
     stroke: none;
+    cursor: pointer;
 }

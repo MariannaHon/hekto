@@ -5,14 +5,14 @@ import { useState, useMemo } from 'react';
 import { useAppDispatch } from '@/redux/hooks';
 import { addItem } from '@/redux/cart/slice';
 import toast from 'react-hot-toast';
-import { addToWishlist, removeFromWishlist } from '@/redux/wishlist/slice';
-import { selectWishlistItems } from '@/redux/wishlist/selectors';
+import { addToWishList, removeFromWishList } from '@/redux/wishlist/slice';
+import { selectWishListItems } from '@/redux/wishlist/selectors';
 import { useSelector } from 'react-redux';
 
 const LatestProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const [isZoomed, setIsZoomed] = useState(false);
     const dispatch = useAppDispatch();
-    const wish = useSelector(selectWishlistItems);
+    const wish = useSelector(selectWishListItems);
 
     const handleAddToCart = () => {
         dispatch(
@@ -34,9 +34,9 @@ const LatestProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
     const handleAddToFavorites = () => {
         if (isFavorite) {
-            dispatch(removeFromWishlist(product.id));
+            dispatch(removeFromWishList(product.id));
         } else {
-            dispatch(addToWishlist(product));
+            dispatch(addToWishList(product));
         }
         toast.success('Product successfully added to favorites!');
     };

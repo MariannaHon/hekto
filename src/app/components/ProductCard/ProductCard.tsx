@@ -8,8 +8,8 @@ import { addItem } from '@/redux/cart/slice';
 import toast from 'react-hot-toast';
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { addToWishlist, removeFromWishlist } from '@/redux/wishlist/slice';
-import { selectWishlistItems } from '@/redux/wishlist/selectors';
+import { addToWishList, removeFromWishList } from '@/redux/wishlist/slice';
+import { selectWishListItems } from '@/redux/wishlist/selectors';
 import { useSelector } from 'react-redux';
 
 export interface ProductCardProps {
@@ -20,7 +20,7 @@ export interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, view }) => {
     const dispatch = useAppDispatch();
     const [isZoomed, setIsZoomed] = useState(false);
-    const wish = useSelector(selectWishlistItems);
+    const wish = useSelector(selectWishListItems);
 
     const handleAddToCart = () => {
         dispatch(
@@ -42,9 +42,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, view }) => {
 
     const handleAddToFavorites = () => {
         if (isFavorite) {
-            dispatch(removeFromWishlist(product.id));
+            dispatch(removeFromWishList(product.id));
         } else {
-            dispatch(addToWishlist(product));
+            dispatch(addToWishList(product));
         }
         toast.success('Product successfully added to favorites!');
     };
@@ -52,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, view }) => {
         <div
             className={`${css.card} ${
                 view === 'list' ? css.listCard : css.gridCard
-            } ${isZoomed ? css['card-zoomed'] : ''}`}
+            }`}
         >
             <Image
                 className={isZoomed ? css['img-zoomed'] : css.img}
@@ -67,7 +67,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, view }) => {
             <div
                 className={`${
                     view === 'list' ? css.listContainer : css.gridContainer
-                } ${isZoomed ? css.hidden : ''}`}
+                }`}
             >
                 <Link href={`/products/${product.id}`}>
                     <div>

@@ -96,37 +96,17 @@
     height: 3.2rem;
     border-radius: 3.2rem;
     background-color: $white;
+    cursor: pointer;
 }
 
 .icon {
     fill: $tertiary;
 }
 
-.card-zoomed {
-    width: 60rem;
-    height: 40rem;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    background-color: white;
-    padding: 0;
-    border-radius: 16px;
-    &:hover,
-    &:focus {
-        margin: 0;
-    }
-}
-
 .img-zoomed {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.hidden {
-    display: none;
+    transform: scale(2);
+    position: relative;
+    z-index: 1;
 }
 
 .favorite {
@@ -136,4 +116,20 @@
 .img {
     height: 20rem;
     width: 28.8rem;
+}
+
+.not {
+    width: 97.6rem;
+    height: 23.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notTitle {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1.23077;
+    letter-spacing: 0.01em;
+    color: $black;
 }

@@ -9,6 +9,7 @@ import {
 } from '@/redux/products/selectors';
 
 import css from './Latest.module.scss';
+import Loader from '../Loader/Loader';
 
 const New = () => {
     const products = useSelector(selectProducts).slice(4, 10);
@@ -16,7 +17,7 @@ const New = () => {
     const isLoading = useSelector(selectLoading);
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loader />;
     }
 
     if (error) {

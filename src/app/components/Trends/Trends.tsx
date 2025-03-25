@@ -11,6 +11,7 @@ import {
     selectError,
     selectLoading,
 } from '@/redux/products/selectors';
+import Loader from '../Loader/Loader';
 
 const Trends: React.FC = () => {
     const products = useSelector(selectProducts).slice(0, 4);
@@ -18,7 +19,7 @@ const Trends: React.FC = () => {
     const isLoading = useSelector(selectLoading);
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loader />;
     }
 
     if (error) {

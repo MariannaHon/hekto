@@ -1,5 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+export enum FilterType {
+    Brand = 'brand',
+    Categories = 'categories',
+    Discount = 'discount',
+    Price = 'price',
+    Rating = 'rating',
+    Name = 'name',
+}
+
 const filtersInitialState = {
     brand: [] as Array<string>,
     discount: [] as Array<string>,
@@ -8,8 +17,6 @@ const filtersInitialState = {
     price: [] as Array<number>,
     name: '',
 };
-
-export type FilterKey = keyof typeof filtersInitialState;
 
 const filtersSlice = createSlice({
     name: 'filters',
@@ -21,7 +28,7 @@ const filtersSlice = createSlice({
         changeFilter(
             state,
             action: PayloadAction<{
-                filter: FilterKey;
+                filter: FilterType;
                 value: string | string[] | number[];
             }>
         ) {

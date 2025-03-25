@@ -3,6 +3,9 @@
 .hero {
     position: relative;
     background-color: #f2f0ff;
+    min-height: 46rem;
+    height: auto;
+    max-height: 76rem;
 }
 
 .img {
@@ -20,8 +23,8 @@
 }
 
 .text {
-    max-height: 29.6rem;
-    max-width: 57rem;
+    height: 29.6rem;
+    width: 57rem;
     margin-right: 5.6rem;
 }
 
@@ -39,7 +42,7 @@
 
 .dots {
     position: absolute;
-    bottom: 4.4rem;
+    bottom: 6%;
     left: 50%;
     transform: translateX(-50%);
 }
